@@ -49,3 +49,13 @@
   line-height: 20px;
   cursor: pointer;
 }
+
+.header__menu-search {
+  object-fit: contain;
+}
+
+.header__menu-mobile {
+  display: none;
+  gap: 20px;
+  position: relative;
+}

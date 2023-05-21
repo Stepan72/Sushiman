@@ -19,9 +19,9 @@ function Navbar() {
         </div>
         {/* DESKTOP */}
         <ul className="header__menu">
-          {navData.map((el) => {
+          {navData.map((el, index) => {
             return (
-              <li>
+              <li key={index}>
                 <a href={`#${el.href}`}>{el.title}</a>
               </li>
             );
@@ -29,8 +29,9 @@ function Navbar() {
           <li>
             <Image
               src="assets/search.svg"
-              width={20}
-              height={20}
+              width={24}
+              height={24}
+              className="header__menu-search"
               alt="search"
             />
           </li>
