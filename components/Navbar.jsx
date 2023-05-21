@@ -39,7 +39,7 @@ function Navbar() {
         {/* MOBILE */}
         <ul className="header__menu-mobile">
           <li>
-            <Image src="assets/menu.svg" alt="menu" width={20} height={20} />
+            <Image src="assets/menu.svg" alt="menu" width={24} height={24} />
           </li>
         </ul>
       </nav>
