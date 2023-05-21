@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import "../styles/sections/navbar.css";
+import "../styles/sections/navbar.scss";
 
 const navData = [
   { href: "menu", title: "Menu" },
