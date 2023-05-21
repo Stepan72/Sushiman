@@ -1,15 +1,10 @@
-export default async function Home() {
-  const response = await fetch('https://swapi.dev/api/people/1', {
-    next: {
-      revalidate: 2,
-    },
-  });
-  const data = await response.json();
+import Navbar from "@/components/Navbar";
 
+export default async function Home() {
   return (
     <>
-      <p>{data.name}</p>
-      Check
+      <Navbar />
+      <h1>Sushiman</h1>
     </>
   );
 }

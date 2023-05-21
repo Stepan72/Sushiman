@@ -1,4 +1,5 @@
 import '../styles/global.css';
+import React from 'react';
 
 export const metadata = {
   title: 'Sushiman',
@@ -9,7 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="../public/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
       </head>
       <body>{children}</body>
     </html>
