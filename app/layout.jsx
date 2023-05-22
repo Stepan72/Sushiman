@@ -1,6 +1,7 @@
 import "../styles/global.css";
 import React from "react";
 
+///
 export const metadata = {
   title: "Sushiman",
   description: "The best service to order delicious sushi!",

@@ -1,6 +1,9 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import "../styles/sections/navbar.scss";
+import { motion } from "framer-motion";
+import { navVariants } from "@/utils/motion";
 
 const navData = [
   { href: "menu", title: "Menu" },
@@ -14,11 +17,18 @@ function Navbar() {
     <header>
       <nav className="header__nav">
         <div className="header__logo">
-          <h4>Sushiman</h4>
+          <motion.h4 variants={navVariants} initial="hidden" whileInView="show">
+            Sushiman
+          </motion.h4>
           <div className="header__logo-overlay"></div>
         </div>
         {/* DESKTOP */}
-        <ul className="header__menu">
+        <motion.ul
+          className="header__menu"
+          variants={navVariants}
+          initial="hidden"
+          whileInView="show"
+        >
           {navData.map((el, index) => {
             return (
               <li key={index}>
@@ -35,7 +45,7 @@ function Navbar() {
               alt="search"
             />
           </li>
-        </ul>
+        </motion.ul>
         {/* MOBILE */}
         <ul className="header__menu-mobile">
           <li>

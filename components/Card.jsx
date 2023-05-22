@@ -1,13 +1,17 @@
 "use client";
-
+import { motion } from "framer-motion";
+import { slideIn } from "@/utils/motion";
 import "../styles/sections/menu.scss";
 
 function Card({ cardData, active, setActive, id }) {
-  console.log(active);
+  //   console.log(active);
 
   return (
     <>
-      <article
+      <motion.article
+        variants={slideIn("down", "tween", 0.1, 0.4)}
+        initial="hidden"
+        whileInView="show"
         className={`popular-foods__card ${active === id ? "active-card" : ""}`}
         onPointerEnter={() => {
           setActive(id);
@@ -28,7 +32,7 @@ function Card({ cardData, active, setActive, id }) {
             2
           )}`}</p>
         </div>
-      </article>
+      </motion.article>
     </>
   );
 }

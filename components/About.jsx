@@ -1,22 +1,42 @@
+"use client";
 import React from "react";
 import "../styles/sections/about.scss";
+import { motion } from "framer-motion";
+import { slideIn } from "@/utils/motion";
 
 function About() {
   return (
     <section className="about-us" id="about-us">
       <div className="about-us__image">
         <div className="about-us__image-sushi3">
-          <img src="/assets/sushi-3.png" alt="sushi3-image" />
+          <motion.img
+            src="/assets/sushi-3.png"
+            alt="sushi3-image"
+            variants={slideIn("left", "tween", 0.1, 0.5)}
+            initial="hidden"
+            whileInView="show"
+          />
         </div>
         <button className="about-us__button">
           Learn More
           <img src="/assets/arrow-up-right.svg" alt="learn more" />
         </button>
         <div className="about-us__image-sushi2">
-          <img src="/assets/sushi-2.png" alt="sushi2-image" />
+          <motion.img
+            src="/assets/sushi-2.png"
+            alt="sushi2-image"
+            variants={slideIn("left", "tween", 0.1, 0.4)}
+            initial="hidden"
+            whileInView="show"
+          />
         </div>
       </div>
-      <div className="about-us__content">
+      <motion.div
+        className="about-us__content"
+        variants={slideIn("right", "tween", 0.1, 0.5)}
+        initial="hidden"
+        whileInView="show"
+      >
         <p className="sushi__subtitle">About Us / 私たちに関しては</p>
         <h3 className="sushi__title">
           Our mission is to bring true Japanese flavours to you.
@@ -26,7 +46,7 @@ function About() {
           mindset of hospitality, with our shopping and dining for our
           customers.
         </p>
-      </div>
+      </motion.div>
     </section>
   );
 }

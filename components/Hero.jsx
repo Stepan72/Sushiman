@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
-
 import "../styles/sections/hero.scss";
+import { motion } from "framer-motion";
+import { slideIn } from "@/utils/motion";
 
 function Hero() {
   return (
@@ -12,7 +14,12 @@ function Hero() {
         </h2>
         <div className="hero-image__overlay"></div>
       </div>
-      <div className="hero-content">
+      <motion.div
+        className="hero-content"
+        variants={slideIn("right", "tween", 0.1, 0.5)}
+        initial="hidden"
+        whileInView="show"
+      >
         <div className="hero-content-info">
           <h1>Feel the taste Japanese Food</h1>
           <p>Feel the taste Japanese Food from anywhere and anytime.</p>
@@ -39,7 +46,7 @@ function Hero() {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
