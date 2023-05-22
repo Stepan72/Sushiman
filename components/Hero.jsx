@@ -28,8 +28,8 @@ function Hero() {
           <div className="hero-content__customer flex-center">
             <h4>
               24<span>K+</span>
-              <p>Happy Customers</p>
             </h4>
+            <p>Happy Customers</p>
           </div>
           <div className="hero-content__review">
             <img src="/assets/user.png" alt="user" />
