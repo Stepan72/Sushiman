@@ -9,6 +9,30 @@ const buttonData = [
   { sushiNumber: 6, title: "Danggo" },
 ];
 
+const cardData = [
+  {
+    cardNumber: 12,
+    cardTitle: "Chezu Sushi",
+    cardActive: false,
+    cardPrice: 21,
+    cardRating: 4.9,
+  },
+  {
+    cardNumber: 11,
+    cardTitle: "Original Sushi",
+    cardActive: true,
+    cardPrice: 19,
+    cardRating: 5.0,
+  },
+  {
+    cardNumber: 10,
+    cardTitle: "Ramen Legendo",
+    cardActive: false,
+    cardPrice: 13,
+    cardRating: 4.7,
+  },
+];
+
 function Menu() {
   return (
     <section className="popular-foods" id="menu">
@@ -29,7 +53,9 @@ function Menu() {
         <button className="popular-foods__filter-btn">Others</button>
       </div>
       <div className="popular-foods__catalogue">
-        <Card />
+        {cardData.map((el, index) => {
+          return <Card cardData={el} key={index} />;
+        })}
       </div>
       <button className="popular-foods__button">
         Explore Food

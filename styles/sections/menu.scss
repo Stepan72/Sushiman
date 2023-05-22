@@ -91,3 +91,30 @@
     margin-left: 21px;
   }
 }
+
+.popular-foods__card {
+  padding: 38px;
+  min-width: 260px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 36px;
+  background: rgba(255, 255, 255, 0.05);
+  border: rgba(255, 255, 255, 0.2);
+}
+
+.popular-food__card-image {
+  width: 110px;
+  height: 84px;
+}
+
+.popular-food__card-title {
+  margin-top: 47px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: var(--playfair-display);
+  color: #fff;
+  text-align: center;
+}
