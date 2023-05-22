@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import "../styles/sections/menu.scss";
 import Card from "./Card";
+import { useState } from "react";
 
 const buttonData = [
   { sushiNumber: 9, title: "Sushi" },
@@ -13,27 +16,25 @@ const cardData = [
   {
     cardNumber: 12,
     cardTitle: "Chezu Sushi",
-    cardActive: false,
     cardPrice: 21,
     cardRating: 4.9,
   },
   {
     cardNumber: 11,
     cardTitle: "Original Sushi",
-    cardActive: true,
     cardPrice: 19,
     cardRating: 5.0,
   },
   {
     cardNumber: 10,
     cardTitle: "Ramen Legendo",
-    cardActive: false,
     cardPrice: 13,
     cardRating: 4.7,
   },
 ];
 
 function Menu() {
+  const [active, setActive] = useState(1);
   return (
     <section className="popular-foods" id="menu">
       <h2 className="popular-foods__title">Popular Food / 人気</h2>
@@ -54,7 +55,15 @@ function Menu() {
       </div>
       <div className="popular-foods__catalogue">
         {cardData.map((el, index) => {
-          return <Card cardData={el} key={index} />;
+          return (
+            <Card
+              cardData={el}
+              key={index}
+              id={index}
+              active={active}
+              setActive={setActive}
+            />
+          );
         })}
       </div>
       <button className="popular-foods__button">

@@ -1,14 +1,17 @@
-import React from "react";
+"use client";
+
 import "../styles/sections/menu.scss";
 
-function Card({ cardData }) {
-  //   console.log(cardData);
+function Card({ cardData, active, setActive, id }) {
+  console.log(active);
+
   return (
     <>
       <article
-        className={`popular-foods__card ${
-          cardData.cardActive ? "active-card" : ""
-        }`}
+        className={`popular-foods__card ${active === id ? "active-card" : ""}`}
+        onPointerEnter={() => {
+          setActive(id);
+        }}
       >
         <img
           className="popular-food__card-image"
