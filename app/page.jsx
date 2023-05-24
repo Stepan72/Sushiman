@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Menu from "@/components/Menu";
 import Trending from "@/components/Trending";
 import Subscription from "@/components/Subscription";
+import Footer from "@/components/Footer";
 
 export default async function Home() {
   return (
@@ -14,6 +15,7 @@ export default async function Home() {
       <Menu />
       <Trending />
       <Subscription />
+      <Footer />
     </>
   );
 }
