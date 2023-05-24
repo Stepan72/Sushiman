@@ -180,3 +180,32 @@
   font-size: 24px;
   color: var(--secondary-color);
 }
+
+/* START: popular media queries */
+@media screen and (max-width: 550px) {
+  .popular-foods {
+    padding: 64px 32px;
+  }
+
+  .popular-foods__filters {
+    gap: 5px;
+    justify-content: flex-start;
+  }
+
+  .popular-foods__card,
+  .popular-foods__card.active-card {
+    min-width: 100%;
+  }
+}
+/* END: popular media queries */
+
+// /* Hide scrollbar for Chrome, Safari and Opera */
+// .sushi__hide-scrollbar::-webkit-scrollbar {
+//   display: none;
+// }
+
+// /* Hide scrollbar for IE, Edge and Firefox */
+// .sushi__hide-scrollbar {
+//   -ms-overflow-style: none; /* IE and Edge */
+//   scrollbar-width: none; /* Firefox */
+// }
