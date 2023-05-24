@@ -60,4 +60,15 @@
   display: none;
   gap: 20px;
   position: relative;
+  /// все что меньше 900 px отображай
+  @media screen and (max-width: 900px) {
+    display: flex;
+  }
+}
+
+.header__menu {
+  //// все что меньше 900 px не отображай
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 }
