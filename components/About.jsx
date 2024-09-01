@@ -3,6 +3,7 @@ import React from "react";
 import "../styles/sections/about.scss";
 import { motion } from "framer-motion";
 import { slideIn } from "@/utils/motion";
+import Image from "next/image";
 
 function About() {
   return (
@@ -19,7 +20,12 @@ function About() {
         </div>
         <button className="about-us__button">
           Learn More
-          <img src="/assets/arrow-up-right.svg" alt="learn more" />
+          <Image
+            src="/assets/arrow-up-right.svg"
+            width={12}
+            height={12}
+            alt="learn more"
+          />
         </button>
         <div className="about-us__image-sushi2">
           <motion.img

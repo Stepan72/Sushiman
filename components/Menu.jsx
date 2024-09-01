@@ -4,6 +4,7 @@ import React from "react";
 import "../styles/sections/menu.scss";
 import Card from "./Card";
 import { useState } from "react";
+import Image from "next/image";
 
 const buttonData = [
   { sushiNumber: 9, title: "Sushi" },
@@ -43,8 +44,10 @@ function Menu() {
         {buttonData.map((el, index) => {
           return (
             <button key={index} className="popular-foods__filter-btn ">
-              <img
+              <Image
                 src={`/assets/sushi-${el.sushiNumber}.png`}
+                width={36}
+                height={36}
                 alt={`sushi ${el.sushiNumber}`}
               />
               {el.title}
@@ -68,7 +71,12 @@ function Menu() {
       </div>
       <button className="popular-foods__button">
         Explore Food
-        <img src="/assets/arrow-right.svg" alt="arrow-right" />
+        <Image
+          src="/assets/arrow-right.svg"
+          height={14}
+          width={14}
+          alt="arrow-right"
+        />
       </button>
     </section>
   );
