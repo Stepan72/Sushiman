@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { slideIn } from "@/utils/motion";
 import "../styles/sections/trending.scss";
+import Image from "next/image";
 const sushiData = [
   { title: "Make Sushi" },
   { title: "Uramaki Sushi" },
@@ -41,7 +42,12 @@ function Trending() {
                 return (
                   <li key={index}>
                     <div className="trending__icon flex-center">
-                      <img src="/assets/check.svg" alt="check" />
+                      <Image
+                        width={12}
+                        height={12}
+                        src="/assets/check.svg"
+                        alt="check"
+                      />
                     </div>
                     <p>{el.title}</p>
                   </li>
@@ -58,10 +64,20 @@ function Trending() {
               whileInView="show"
             />
             <div className="trending__arrow trending__arrow-left">
-              <img src="/assets/arrow-vertical.svg" alt="arrow vertical" />
+              <Image
+                width={6}
+                height={423}
+                src="/assets/arrow-vertical.svg"
+                alt="arrow vertical"
+              />
             </div>
             <div className="trending__arrow trending__arrow-bottom">
-              <img src="/assets/arrow-horizontal.svg" alt="arrow horizontal" />
+              <Image
+                width={423}
+                height={6}
+                src="/assets/arrow-horizontal.svg"
+                alt="arrow horizontal"
+              />
             </div>
           </div>
         </section>
@@ -79,10 +95,20 @@ function Trending() {
               whileInView="show"
             />
             <div className="trending__arrow trending__arrow-right">
-              <img src="/assets/arrow-vertical.svg" alt="arrow vertical" />
+              <Image
+                width={6}
+                height={423}
+                src="/assets/arrow-vertical.svg"
+                alt="arrow vertical"
+              />
             </div>
             <div className="trending__arrow trending__arrow-top">
-              <img src="/assets/arrow-horizontal.svg" alt="arrow horizontal" />
+              <Image
+                width={423}
+                height={6}
+                src="/assets/arrow-horizontal.svg"
+                alt="arrow horizontal"
+              />
             </div>
           </div>
           <motion.div
@@ -101,7 +127,12 @@ function Trending() {
                 return (
                   <li key={index}>
                     <div className="trending__icon flex-center">
-                      <img src="/assets/check.svg" alt="check" />
+                      <Image
+                        width={12}
+                        height={12}
+                        src="/assets/check.svg"
+                        alt="check"
+                      />
                     </div>
                     <p>{el.title}</p>
                   </li>
